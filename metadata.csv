@@ -1,0 +1,39 @@
+Tag,Field Name,Data Type,Description,Range,Explanation
+com_id,Committee ID,Character,Character C followed by eight digits,9 characters,Unique nine digit identifier used by the Commission to identify each political committee. In general committee id's begin with the letter C which is followed by eight
+com_nam,Committee Name,Character,Name of committee or other entity registered with the FEC,Max 90 characters,This is the name of the committee
+can_id,Candidate ID,Character,,9 characters,"First character indicates office sought - H=House, S=Senate, P=Presidential. Columns 3-4 are the state abbreviation for Congressional candidates"
+can_nam,Candidate name,Character,Name of the candidate,Max 38 characters,List of all disclosure filings for this committee
+ele_yea,Election year,Number,,4 characters,General election year of the cycle in which this candidate is running
+can_off,Candidate Office,Text,Office abbreviation,1 character,P=President; S=Senate; H=House
+can_off_sta,Candidate Office State,Character,Postal abbreviation for State,2 characters,
+can_off_dis,Candidate Office District,Number,District number for House candidates,2 characters,
+lin_num,Line number from Detailed Summary Page of FEC Form 3,Character,category of disbursement based on detailed summary page of FEC Form 3,max 12 characters,Description of Form 3 (See page 6 of these instructions)
+lin_ima,Link to image presentation,URI,Page where transaction may be viewed as image,11 or 18 characters,"11-digit Image Number Format
+YYOORRRFFFF
+YY - scanning year 
+OO - office (01 - House, 02 - Senate, 03 - FEC Paper, 9x - FEC Electronic) 
+RRR - reel number 
+FFFF- frame number
+18-digit Image Number Format (June 29, 2015)
+YYYYMMDDSSPPPPPPPP
+YYYY - scanning year 
+MM - scanning month 
+DD - scanning day 
+SS - source (02 - Senate, 03 - FEC Paper, 9x - FEC Electronic) 
+PPPPPPPP - page (reset to zero every year on January 1)"
+rec_com_id,Recipient Committee ID,Character,Character C followed by eight digits,9 characters,"If the disbursement goes to another committee registered with the FEC, this would be the ID number of the committee receiving the payment"
+rec_nam,Recipient Name,Text,,max 90 characters,Name of the person or vendor or other entity receiving this payment from the committee
+rec_str1,Recipient Street Address,Character,Street address of entity being paid,max 34 characters,
+rec_str2,Apt. number or Suite number for recipient,Character,,max 34 characters,
+rec_cit,recipient city,Text,,max 18 characters,
+rec_sta,recipient state,Text,,2 characters,postal state abbreviation
+rec_zip,recipient zip,Character,,max 9 characters,zip code may be either 5 or 9 digits
+dis_dat,date of disbursement,Date,date of specific disbursement,,
+dis_amo,amount of disbursement,Number,amount spent,14.2 characters,
+dis_pur_des,purpose description,,,max 100 characters,Open-ended description of the purpose of the disbursement.
+mem_cod,memo code,Character,,1 Character,"record is ""memo"" so not included in totals, e.g. specific charges that are also included in an overall credit card payment"
+mem_tex,memo text,Character,,max 100 characters,explanation for the memo notation
+cat_cod,category code,Number,,3 characters,see the list of category codes
+cat_des,category description,Character,,max 40 characters,description of category for disbursement
+tra_id,transaction id,Character,unique identifier for the transaction (unique within the specific report),max 32 characters,
+bac_ref_id,back reference id,Character,link to another transaction,max 20 characters,"""parent"" transaction id where there is a relationship between two transactions - e.g. a detailed charge that is part of a credit card payment"
